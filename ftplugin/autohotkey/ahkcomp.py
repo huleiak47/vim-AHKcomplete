@@ -1767,10 +1767,10 @@ def ahk_complete(base):
     import vim
     lbase = base.lower()
     vim.command("let g:ahk_complete_dict = []")
-    for k, v in AHK_DICT.iteritems():
+    for k, v in AHK_DICT.items():
         if k.lower().startswith(lbase):
             try:
                 vim.command(r"""call add(g:ahk_complete_dict, {'word':'%s', 'info':'%s', 'icase':1})""" % (k, v))
             except vim.error as e:
                 import sys
-                print >> sys.stderr, str(e)
+                print(str(e), file=sys.stderr)

@@ -15,7 +15,7 @@
 let s:plugin_path = escape(expand('<sfile>:p:h'), '\')
 "exe 'python sys.path = ["' . s:plugin_path . '"] + sys.path'
 
-python << PYEOL
+python3 << PYEOL
 import sys
 import vim
 sys.path.append(vim.eval("s:plugin_path"))
@@ -45,7 +45,7 @@ function! ahkcomplete#Complete(findstart, base)
         endwhile
         return 0
     else
-        execute 'python ahkcomp.ahk_complete("' . a:base . '")'
+        execute 'python3 ahkcomp.ahk_complete("' . a:base . '")'
         call sort(g:ahk_complete_dict)
         return g:ahk_complete_dict
     endif
