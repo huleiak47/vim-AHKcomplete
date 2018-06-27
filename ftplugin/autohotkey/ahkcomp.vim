@@ -20,10 +20,3 @@ import vim
 sys.path.append(vim.eval("s:plugin_path"))
 import ahkcomp
 PYEOL
-
-function! DebugMsg(msg)
-    "let g:debug_str = a:msg
-    "exe 'python3 debugmsg()'
-endfunction
-
-

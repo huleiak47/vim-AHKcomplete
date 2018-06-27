@@ -1772,5 +1772,4 @@ def ahk_complete(base):
             try:
                 vim.command(r"""call add(g:ahk_complete_dict, {'word':'%s', 'info':'%s', 'icase':1})""" % (k, v))
             except vim.error as e:
-                import sys
-                print(str(e), file=sys.stderr)
+                pass

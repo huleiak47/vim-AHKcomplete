@@ -22,11 +22,6 @@ sys.path.append(vim.eval("s:plugin_path"))
 import ahkcomp
 PYEOL
 
-function! DebugMsg(msg)
-    "let g:debug_str = a:msg
-    "exe 'python debugmsg()'
-endfunction
-
 function! ahkcomplete#Complete(findstart, base)
     if a:findstart
         let line = getline('.')
